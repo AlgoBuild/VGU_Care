@@ -1,11 +1,17 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const authRoute = require('./routes/auth');
+
+
+
 
 // Middleware
 app.use(express.json());
 const appointmentsRoute = require('./routes/appointments');
 app.use('/api/appointments', appointmentsRoute);
+app.use('/api/auth', authRoute);
+
 
 // Basic health check route
 app.get('/api/health', (req, res) => {
