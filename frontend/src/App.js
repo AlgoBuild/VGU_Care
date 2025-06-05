@@ -1,11 +1,19 @@
-// This is a minimal Node.js server setup for testing purposes.
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+
+
 function App() {
   return (
-    <div>
-      <h1>VGU Care Frontend</h1>
-      <p>React app is running!</p>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<h2>Student Dashboard</h2>} />
+        <Route path="/nurse" element={<h2>Nurse Dashboard</h2>} />
+        <Route path="/admin" element={<h2>Admin Dashboard</h2>} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App; 
+export default App;

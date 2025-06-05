@@ -121,8 +121,8 @@ For active development with hot reload:
 docker-compose up postgres -d
 
 # Run frontend and backend on your machine (with auto-reload)
-cd frontend && npm install && npm start
-cd backend && npm install && npm run dev
+cd frontend && npm install && npm startbackend && npm install && npm run dev
+cd 
 ```
 
 ### Common Docker Commands:

@@ -4,6 +4,8 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+const appointmentsRoute = require('./routes/appointments');
+app.use('/api/appointments', appointmentsRoute);
 
 // Basic health check route
 app.get('/api/health', (req, res) => {
